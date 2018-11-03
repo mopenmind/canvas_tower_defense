@@ -1,5 +1,5 @@
 //defense towers
-// base tower 
+// base tower
 var towers=[];
 
 function Tower(x,y) {
@@ -38,7 +38,7 @@ Tower.prototype.findUnitVector = function() {
   if (!this.target) return false; //if there is no target, dont bother calculating unit vector
   var xDist = this.target.x-this.x;
   var yDist = this.target.y-this.y;
-  var dist = Math.sqrt(xDist*xDist+yDist*yDist); 
+  var dist = Math.sqrt(xDist*xDist+yDist*yDist);
   this.xFire = this.x+this.r*xDist/dist; //where turret ends and bullets start
   this.yFire = this.y+this.r*yDist/dist;
 };
@@ -79,7 +79,7 @@ Tower2.prototype.constructor = Tower2;
 
 Tower2.prototype.range = Tower.prototype.range*1.4;//looking to double area, not radius or range
 Tower2.prototype.color = 'brown';
-Tower2.prototype.cost = Tower.prototype.cost * 1.5;
+Tower2.prototype.cost = Tower.prototype.cost * 0.5;
 Tower2.prototype.rateOfFire = Tower.prototype.rateOfFire / 2;
 
 //short range high damage tower
@@ -96,7 +96,6 @@ Tower3.prototype.cost = Tower.prototype.cost * 1.5;
 
 
 //populate array of towers
-//this is used to figure out which 
+//this is used to figure out which
 //class of tower to add when mouse is clicked
 var towerClasses = [Tower,Tower2,Tower3];
-
