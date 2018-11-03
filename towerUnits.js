@@ -76,7 +76,7 @@ var Tower2 = function(x,y) {
 }
 Tower2.prototype = Object.create(Tower.prototype);
 Tower2.prototype.constructor = Tower2;
-
+Tower2.prototype.hurt = Tower.prototype.hurt*2;
 Tower2.prototype.range = Tower.prototype.range*1.4;//looking to double area, not radius or range
 Tower2.prototype.color = 'brown';
 Tower2.prototype.cost = Tower.prototype.cost * 0.5;
